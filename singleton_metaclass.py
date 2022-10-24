@@ -1,4 +1,6 @@
 # Metaclass that creates a Singleton base type when called.
+# Message 'Loading Database' only gets invoked once, thus, completing the functionality of a singleton class
+# The code is very similar to the 'decorator' example
 
 class Singleton(type):
     # Dictionary: the uderscore means that it is not meant to be consumed
