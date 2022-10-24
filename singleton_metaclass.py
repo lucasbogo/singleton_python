@@ -6,7 +6,7 @@ class Singleton(type):
 
     # Call method> Check whether or not the class is in the set of instances
     # If it is not, then we construct it and subsequently return it
-    def __call__(cls, *args, **kwds):
+    def __call__(cls, *args, **kwargs):
         # Check if cls is in instance
         if cls not in cls._instances:
              # If it is not, then we construct it
@@ -16,10 +16,11 @@ class Singleton(type):
 
 # Use the metaclass singleton
 class Database(metaclass=Singleton):
+    # Initialize
     def __init__(self):
         print('Loading database')
 
-
+# Test
 if __name__ == '__main__':
     d1 = Database()
     d2 = Database()
